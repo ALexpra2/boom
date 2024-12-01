@@ -25,6 +25,7 @@ h1 {
 .winResult {
   color:greenyellow;
   font-weight: 900;
+  font-size: x-large;
 }
 
 .loseResult {

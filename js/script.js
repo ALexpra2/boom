@@ -1,7 +1,7 @@
 let segundos = 5;
 
 //Genera el numero Aleatorio
-const numeroAleatorio = Math.floor((Math.random() * (3 - 1 + 1)) + 1);
+let numeroAleatorio = Math.floor((Math.random() * (3 - 1 + 1)) + 1);
 console.log(numeroAleatorio);
 
 
@@ -22,6 +22,7 @@ document.addEventListener('click', function(event) {
 
 //Genera la cuenta atras desde 5 establecida al principio
 function cuentaAtras() {
+    
     const cuenta = document.getElementById('countdown');
     if (segundos > 0) {
         cuenta.innerHTML = `<p>Cuenta atras: ${segundos} seg</p>`
@@ -35,7 +36,8 @@ function cuentaAtras() {
 }
 
 function iniciar() {
-    intervalo = setInterval(cuentaAtras, 1000);
+   
+   intervalo = setInterval(cuentaAtras, 1000);   //cuando poner let const o nada
 }
 
 
@@ -49,7 +51,7 @@ function comprobarJuego() {
     if (numeroElegido === numeroAleatorio) {
         resultado.innerHTML = `
         <p class='resultadoComparacion'>Tu numero ${numeroElegido} es igual al numero ${numeroAleatorio}</p>
-        <p class='winResult'>!Enhorabuena, Has salvado el mundo!"</p>`;
+        <p class='winResult'>!Enhorabuena, Has salvado el mundo!  👑"</p>`;
     }
     else {
         resultado.innerHTML = `
